@@ -1,0 +1,38 @@
+datepicker {
+	display: block;
+	width: 400px;
+	box-sizing: border-box;
+}
+
+.datepicker-month{
+	
+	
+}
+
+.datepicker-day{
+	flex: 0 0 calc(100%/7);
+}
+
+.flex-container{
+	display: flex;
+}
+
+.flex-container.wrap{
+	flex-wrap: wrap;
+}
+
+.flex-container.v-center{
+	align-items: center;
+}
+
+.flex-container.space-between{
+	justify-content: space-between;
+}
+
+.flex-container > .grow{
+ flex-grow: 1;
+}
+
+.datepicker-popover{
+	position: absolute;
+}

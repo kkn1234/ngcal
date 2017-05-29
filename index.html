@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+		<script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment-with-locales.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<script>
+//			angular.module('demo',[]).controller('demoCtrl', function($scope){
+//				
+//			});
+		</script>
+		
+		<script src="datepicker.js"></script>
+		<link rel="stylesheet" href="datepicker.css">
+		
+
+	</head>
+	
+	<body ng-app="demo" ng-controller="demoCtrl">
+		<h4>Calendar</h4>
+		<br>
+		<input class="form-control" ng-model="selectedDate" ng-click="showPicker = !showPicker">
+		<datepicker ng-show="showPicker" ng-Model='$parent.selectedDate' class="datepicker-popover"></datepicker>
+		
+		{{selectedDate.toString()}}
+		
+	</body>
+</html>

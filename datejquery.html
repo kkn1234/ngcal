@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+	<script src="js/jquery.ui.datepicker-fr.js"></script>
+	
+  <script type="text/javascript">
+		$(function(){
+  		$('#datepicker_checkin').datepicker({showOn: 'button', buttonImage: 'images/calendar.gif', buttonImageOnly: true, dateFormat: "dd/mm/yy",
+  		
+			onSelect: function() {
+				var date = $(this).datepicker('getDate');
+				if (date){
+					date.setDate(date.getDate() + 1);
+					$( "#datepicker_checkout" ).datepicker( "option", "minDate", date );
+				}
+			}  		
+  		}); 
+			
+			$('#datepicker_checkout').datepicker({showOn: 'button', buttonImage: 'images/calendar.gif', buttonImageOnly: true, dateFormat: "dd/mm/yy"});
+			
+		});
+	</script>
+	
+</head>
+
+<body>
+	<form action='#'>
+			<p>Arrival date: <input type="text" id="datepicker_checkin" /></p>
+			<p>Departure date: <input type="text" id="datepicker_checkout" /></p>
+			<p><input type="submit"/></p>
+		</div>
+	</form>
+</body>
+</html>
